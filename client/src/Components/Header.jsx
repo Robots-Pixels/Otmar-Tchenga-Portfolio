@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaBars, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaBars, FaChevronLeft, FaChevronRight, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HashLink } from 'react-router-hash-link';
 
 export default function Header({setTransform}) {
 
@@ -29,7 +30,7 @@ export default function Header({setTransform}) {
 
     useEffect(() => {
         if(clicked){
-            setTransform("8");
+            setTransform("10");
         }
         else{
             setTransform("0");
@@ -70,22 +71,25 @@ export default function Header({setTransform}) {
 
                         <div className={` ${isSmall ? "hidden" : "flex"} items-center gap-6 text-[#052935]`}>
                             
-                            <Link>
+                            <HashLink smooth to={"#about"}>
                                 About me
-                            </Link>
+                            </HashLink>
 
-                            <Link>
+                            <HashLink smooth to={"#portfolio"}>
                                 My Work
-                            </Link>
-                            
+                            </HashLink>
+                        
+                            <HashLink smooth to={"#services"}>
+                                My Services
+                            </HashLink>
                         </div>
 
                     </div>
 
                     <div className={`${isSmall ? "hidden" : "flex"} items-center gap-4`}>
-                        <Link className='border-[#028041] border-1 text-[#028041] px-4 py-2 text-[1rem] rounded-xl shadow-3xs shadow-[#028041] hover:bg-[#028041] hover:text-[#fff] transition-colors'>
+                        <HashLink smooth to={"#contact"} className='border-[#028041] border-1 text-[#028041] px-4 py-2 text-[1rem] rounded-xl shadow-3xs shadow-[#028041] hover:bg-[#028041] hover:text-[#fff] transition-colors'>
                             Contact Me
-                        </Link>
+                        </HashLink>
                     </div>
 
                     <div className={`${isSmall ? "block" : "hidden"} border-1 p-2 rounded-sm cursor-pointer`}
@@ -97,25 +101,47 @@ export default function Header({setTransform}) {
                 </div>
             </div>
 
-            <div className={`${isSmall ? "absolute" : "hidden"} w-full h-[8rem] left-0 top-[100%] pb-8`}>
+            <div className={`${isSmall ? "absolute" : "hidden"} w-full h-[8rem] left-0 top-[100%] pt-9 pb-8`}>
 
                 <div className='max-w-3xl md:max-w-6xl mx-auto px-6 md:px-8 h-full'>
 
                     <div className={`flex flex-col gap-3 text-[#052935] h-full justify-center`}>
                         
-                        <Link>
+                        <HashLink smooth to={"#about"}>
                             About me
-                        </Link>
+                        </HashLink>
 
-                        <Link>
+                        <HashLink smooth to={"#portfolio"}>
                             My Work
-                        </Link>
+                        </HashLink>
 
-                        <div className='mt-2 -ml-1'>
-                            <Link className='border-[#028041] border-1 text-[#028041] px-2 py-2 text-[1rem] rounded-xl shadow-3xs shadow-[#028041] hover:bg-[#028041] hover:text-[#fff] transition-colors'>
-                                Contact Me
+                        <HashLink smooth to={"#services"}>
+                            My Services
+                        </HashLink>
+
+                        <div className='flex items-center gap-2'>
+
+                            <Link className='hover:scale-120 transition-all' to={"https://github.com/Robots-Pixels"}>
+                                <FaLinkedin className='text-2xl'/>
                             </Link>
+
+                            <Link className='hover:scale-120 transition-all' to={"/https://www.linkedin.com/in/otmar-tchenga-953988319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}>
+                                <FaGithub className='text-2xl'/>
+                            </Link>
+
+                            <Link className='hover:scale-120 transition-all' to={"mailto:otmartch23@gmail.com"}>
+                                <FaEnvelope className='text-2xl'/>
+                            </Link>
+
                         </div>
+
+                        <div cassName='mt-2 -ml-1'>
+                            <HashLink smooth to={"#contact"} className='border-[#028041] border-1 text-[#028041] px-2 py-2 text-[1rem] rounded-xl shadow-3xs shadow-[#028041] hover:bg-[#028041] hover:text-[#fff] transition-colors'>
+                                Contact Me
+                            </HashLink>
+                        </div>
+                            
+
                         
                     </div>
 
