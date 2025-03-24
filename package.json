@@ -1,0 +1,31 @@
+{
+    "dependencies": {
+      "bcryptjs": "^3.0.2",
+      "cors": "^2.8.5",
+      "dotenv": "^16.4.7",
+      "express": "^4.21.2",
+      "mongoose": "^8.11.0",
+      "nodemon": "^3.1.9"
+    },
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev": "nodemon ./backend/index.js",
+      "start": "node ./backend/index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Robots-Pixels/Otmar-Tchenga-Portfolio.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "bugs": {
+      "url": "https://github.com/Robots-Pixels/Otmar-Tchenga-Portfolio/issues"
+    },
+    "homepage": "https://github.com/Robots-Pixels/Otmar-Tchenga-Portfolio#readme"
+  }
+  
